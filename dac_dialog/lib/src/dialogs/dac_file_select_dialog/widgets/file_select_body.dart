@@ -1,12 +1,12 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_dialog/src/dialogs/pdax_file_select_dialog/widgets/empty_selection_placeholder.dart';
-import 'package:pdax_dialog/src/dialogs/pdax_file_select_dialog/widgets/file_item_container.dart';
-import 'package:pdax_dialog/src/dialogs/pdax_file_select_dialog/widgets/file_selection_menu.dart';
-import 'package:pdax_dialog/src/enums/file_format.dart';
-import 'package:pdax_dialog/src/helpers/file_picker_service.dart';
-import 'package:pdax_dialog/src/models/selected_file.dart';
-import 'package:pdax_dialog/src/shared_widgets/custom_button.dart';
+import 'package:dac_dialog/src/dialogs/dac_file_select_dialog/widgets/empty_selection_placeholder.dart';
+import 'package:dac_dialog/src/dialogs/dac_file_select_dialog/widgets/file_item_container.dart';
+import 'package:dac_dialog/src/dialogs/dac_file_select_dialog/widgets/file_selection_menu.dart';
+import 'package:dac_dialog/src/enums/file_format.dart';
+import 'package:dac_dialog/src/helpers/file_picker_service.dart';
+import 'package:dac_dialog/src/models/selected_file.dart';
+import 'package:dac_dialog/src/shared_widgets/custom_button.dart';
 
 class FileSelectBody extends StatefulWidget {
   const FileSelectBody({

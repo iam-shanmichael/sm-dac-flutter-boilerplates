@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pdax_dialog/pdax_dialog.dart';
-import 'package:pdax_dialog/src/dialogs/pdax_progress_dialog/widgets/circular_indicator.dart';
-import 'package:pdax_dialog/src/dialogs/pdax_progress_dialog/widgets/linear_indicator.dart';
+import 'package:dac_dialog/dac_dialog.dart';
+import 'package:dac_dialog/src/dialogs/dac_progress_dialog/widgets/circular_indicator.dart';
+import 'package:dac_dialog/src/dialogs/dac_progress_dialog/widgets/linear_indicator.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 /// A widget that shows custom progress dialog box.
@@ -40,12 +40,12 @@ import 'package:pointer_interceptor/pointer_interceptor.dart';
 ///     ),
 ///  );
 /// ```
-class PDAXProgressDialog {
-  PDAXProgressDialog(this.context);
+class DACProgressDialog {
+  DACProgressDialog(this.context);
 
   final BuildContext context;
 
-  /// This will show whether the [PDAXProgressDialog] is open.
+  /// This will show whether the [DACProgressDialog] is open.
   ///
   ///  Not directly accessible.
   bool _dialogIsOpen = false;
@@ -55,7 +55,7 @@ class PDAXProgressDialog {
   ///  Not directly accessible.
   final ValueNotifier<int> _progress = ValueNotifier(0);
 
-  /// This will show the [PDAXProgressDialog].
+  /// This will show the [DACProgressDialog].
   Future<void> show({
     ProgressType progressType = ProgressType.circular,
     bool isDismissible = false,
@@ -134,10 +134,10 @@ class PDAXProgressDialog {
     );
   }
 
-  /// This will update the [PDAXProgressDialog]'s progress value.
+  /// This will update the [DACProgressDialog]'s progress value.
   void update(int value) => _progress.value = value;
 
-  /// This will close the [PDAXProgressDialog].
+  /// This will close the [DACProgressDialog].
   void close() {
     if (_dialogIsOpen) {
       Navigator.of(context, rootNavigator: true).pop();

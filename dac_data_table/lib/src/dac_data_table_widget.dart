@@ -1,7 +1,7 @@
 import 'package:advanced_datatable/datatable.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/dac_data_table.dart';
 
 /// A widget that uses Flutter [PaginatedDataTable] widget and allowing pagination
 /// for server side responses.

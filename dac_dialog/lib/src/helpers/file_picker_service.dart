@@ -1,6 +1,6 @@
 import 'package:file_picker/file_picker.dart';
-import 'package:pdax_dialog/src/enums/file_format.dart';
-import 'package:pdax_dialog/src/models/selected_file.dart';
+import 'package:dac_dialog/src/enums/file_format.dart';
+import 'package:dac_dialog/src/models/selected_file.dart';
 
 // Helper for file picker
 class FilePickerService {

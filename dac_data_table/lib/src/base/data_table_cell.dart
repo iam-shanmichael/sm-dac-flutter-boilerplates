@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 ///
 /// This is extended to [DataCell] class from [DataTable].
 class DACDataTableCell extends DataCell {
-  const PDAXDataTableCell(
+  const DACDataTableCell(
     super.child, {
     super.placeholder,
     super.showEditIcon,

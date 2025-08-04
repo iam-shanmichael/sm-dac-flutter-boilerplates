@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pdax_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/dac_data_table.dart';
 
 import 'test_helper.dart';
 
@@ -64,7 +64,7 @@ void main() {
                   source: TestSource(),
                   rowsPerPage: rowsPerPage ?? 10,
                   columns: [
-                    PDAXDataTableColumn(label: 'Id'),
+                    DACDataTableColumn(label: 'Id'),
                   ],
                   paginatorSettings: DataTablePaginatorSettings(
                     availableRowsPerPage: [10, 20, 30, 45],
@@ -119,7 +119,7 @@ void main() {
           home: MaterialApp(
             home: Scaffold(
               body: SingleChildScrollView(
-                child: PDAXDataTable(
+                child: DACDataTable(
                   source: TestSource(twoColumn: true),
                   columnToSort: sortIndex,
                   sortAscending: sortAsc,
@@ -133,7 +133,7 @@ void main() {
                     },
                   ),
                   columns: [
-                    PDAXDataTableColumn(
+                    DACDataTableColumn(
                       label: 'Id',
                       onSort: (i, asc) {
                         setState(() {
@@ -142,7 +142,7 @@ void main() {
                         });
                       },
                     ),
-                    PDAXDataTableColumn(
+                    DACDataTableColumn(
                       label: 'Value',
                       onSort: (i, asc) {
                         setState(() {

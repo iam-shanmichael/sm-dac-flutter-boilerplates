@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pdax_dialog/pdax_dialog.dart';
+import 'package:dac_dialog/dac_dialog.dart';
 
 void main() {
-  late PDAXProgressDialog pd;
+  late DACProgressDialog pd;
 
   Widget testWidget() {
     return MaterialApp(
@@ -26,7 +26,7 @@ void main() {
 
     final BuildContext context = tester.element(find.byType(ElevatedButton));
 
-    pd = PDAXProgressDialog(context);
+    pd = DACProgressDialog(context);
 
     pd.show(description: 'Downloading please wait ...');
     await tester.pump();
@@ -44,7 +44,7 @@ void main() {
 
     final BuildContext context = tester.element(find.byType(ElevatedButton));
 
-    pd = PDAXProgressDialog(context);
+    pd = DACProgressDialog(context);
 
     pd.show(
       progressType: ProgressType.linear,
@@ -65,7 +65,7 @@ void main() {
 
     final BuildContext context = tester.element(find.byType(ElevatedButton));
 
-    pd = PDAXProgressDialog(context);
+    pd = DACProgressDialog(context);
 
     pd.show(
       isDismissible: true,
@@ -98,7 +98,7 @@ void main() {
 
     final BuildContext context = tester.element(find.byType(ElevatedButton));
 
-    pd = PDAXProgressDialog(context);
+    pd = DACProgressDialog(context);
 
     pd.show(
       showPercentIndicator: true,

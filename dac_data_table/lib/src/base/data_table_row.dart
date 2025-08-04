@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdax_data_table/src/base/data_table_cell.dart';
+import 'package:dac_data_table/src/base/data_table_cell.dart';
 
 /// Creates the [DACDataTableRow] for [DACDataTable] widget.
 ///

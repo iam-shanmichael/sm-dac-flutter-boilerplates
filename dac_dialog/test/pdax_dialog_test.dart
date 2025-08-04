@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pdax_dialog/src/dialogs/pdax_dialog/pdax_dialog.dart';
+import 'package:dac_dialog/src/dialogs/dac_dialog/dac_dialog.dart';
 
 void main() {
   Widget testWidget({
@@ -20,7 +20,7 @@ void main() {
             builder: (context) => ElevatedButton(
               child: const Text('Show Dialog Button'),
               onPressed: () {
-                PDAXDialog(
+                DACDialog(
                   context,
                   isDismissible: isDismissible,
                   icon: icon,

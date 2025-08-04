@@ -1,7 +1,7 @@
+import 'package:dac_dialog/src/dialogs/dac_file_select_dialog/widgets/file_select_body.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_dialog/pdax_dialog.dart';
-import 'package:pdax_dialog/src/helpers/dialog_service.dart';
-import 'package:pdax_dialog/src/dialogs/pdax_file_select_dialog/widgets/file_select_body.dart';
+import 'package:dac_dialog/dac_dialog.dart';
+import 'package:dac_dialog/src/helpers/dialog_service.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 typedef OnUploadCallback = ValueChanged<List<SelectedFile>>;

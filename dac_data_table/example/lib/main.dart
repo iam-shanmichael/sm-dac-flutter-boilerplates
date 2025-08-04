@@ -1,7 +1,7 @@
 import 'package:example/data_sources/employee_data_source.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:dac_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/dac_data_table.dart';
 
 void main() {
   runApp(const MyApp());

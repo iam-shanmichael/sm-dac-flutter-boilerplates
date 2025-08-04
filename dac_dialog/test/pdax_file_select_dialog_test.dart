@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pdax_dialog/pdax_dialog.dart';
+import 'package:dac_dialog/dac_dialog.dart';
 
 import 'test_helper.dart';
 
@@ -20,7 +20,7 @@ void main() {
             builder: (context) => ElevatedButton(
               child: const Text('Show File Select Dialog Button'),
               onPressed: () {
-                PDAXFileSelectDialog(
+                DACFileSelectDialog(
                   context,
                   title: title,
                   isDismissible: isDismissible,

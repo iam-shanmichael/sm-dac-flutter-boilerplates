@@ -1,7 +1,7 @@
 import 'dart:async';
-import 'package:example/widgets/pdax_demo_button.dart';
+import 'package:example/widgets/dac_demo_button.dart';
 import 'package:flutter/material.dart';
-import 'package:dac_dialog/pdax_dialog.dart';
+import 'package:dac_dialog/dac_dialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,13 +35,13 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late PDAXProgressDialog pd;
+  late DACProgressDialog pd;
 
   int value = 0;
 
   @override
   void initState() {
-    pd = PDAXProgressDialog(context);
+    pd = DACProgressDialog(context);
     super.initState();
   }
 
@@ -56,7 +56,7 @@ class _MyHomePageState extends State<MyHomePage> {
             DACDemoButton(
               title: 'Generic Dialog',
               onPressed: () {
-                PDAXDialog(
+                DACDialog(
                   context,
                   title: 'This is a title',
                 ).show();
@@ -79,7 +79,7 @@ class _MyHomePageState extends State<MyHomePage> {
             DACDemoButton(
               title: 'Confirmation Dialog',
               onPressed: () {
-                PDAXDialog(
+                DACDialog(
                   context,
                   icon: const Icon(
                     Icons.circle_notifications,

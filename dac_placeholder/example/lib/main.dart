@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:dac_placeholder/pdax_placeholder.dart';
+import 'package:dac_placeholder/dac_placeholder.dart';
 
 void main() {
   runApp(const MyApp());

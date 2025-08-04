@@ -1,8 +1,9 @@
+import 'package:dac_placeholder/src/dac_constants.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_placeholder/pdax_placeholder.dart';
+import 'package:dac_placeholder/dac_placeholder.dart';
 
 class DACPlaceHolder extends StatelessWidget {
-  const PDAXPlaceHolder({
+  const DACPlaceHolder({
     required this.hasButton,
     required this.title,
     required this.description,

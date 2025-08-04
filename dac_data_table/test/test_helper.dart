@@ -1,4 +1,4 @@
-import 'package:pdax_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/dac_data_table.dart';
 
 class TestData {
   final int index;
@@ -27,8 +27,9 @@ class TestSource extends AdvancedDataTableSource<TestData> {
   DACDataTableRow? getRow(int index) {
     final cells = [
       DACDataTableCell(
-        DACDataTableCellText((lastOffset + index).toString()),
+        DACDataTableCellText(lastOffset + index).toString(),
       ),
+      
     ];
     if (twoColumn) {
       cells.add(

@@ -1,4 +1,4 @@
 library pdax_placeholder;
 
-export 'src/pdax_placeholder.dart';
-export 'src/pdax_constants.dart';
+export 'src/dac_placeholder.dart';
+export 'src/dac_constants.dart';

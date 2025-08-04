@@ -1,5 +1,5 @@
 import 'package:example/models/employee.dart';
-import 'package:dac_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/dac_data_table.dart';
 
 class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
   final data = List<Employee>.generate(
@@ -11,10 +11,10 @@ class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
   int get selectedRowCount => 0;
 
   @override
-  PDAXDataTableRow? getRow(int index) {
+  DACDataTableRow? getRow(int index) {
     final currentRowData = lastDetails!.rows[index];
 
-    return PDAXDataTableRow(
+    return DACDataTableRow(
       onSelectChanged: (value) {},
       cells: [
         DACDataTableCell(

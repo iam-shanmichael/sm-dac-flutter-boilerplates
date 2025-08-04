@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pdax_placeholder/pdax_placeholder.dart';
+import 'package:dac_placeholder/dac_placeholder.dart';
 
 void main() {
   testWidgets('Ensure "Title" and "Description" has set value', (WidgetTester tester) async {
@@ -10,9 +10,9 @@ void main() {
           appBar: AppBar(
             title: const Text('Plugin example app'),
           ),
-          body: PDAXPlaceHolder(
-            title: PDAXConstants.defaultTitle,
-            description: PDAXConstants.defaultDescription,
+          body: DACPlaceHolder(
+            title: DACConstants.defaultTitle,
+            description: DACConstants.defaultDescription,
             hasButton: false,
           ),
         ),
@@ -21,9 +21,9 @@ void main() {
 
     await tester.pumpWidget(testWidget());
 
-    expect(find.text(PDAXConstants.defaultTitle), findsOneWidget);
+    expect(find.text(DACConstants.defaultTitle), findsOneWidget);
 
-    expect(find.text(PDAXConstants.defaultDescription), findsOneWidget);
+    expect(find.text(DACConstants.defaultDescription), findsOneWidget);
   });
 
   testWidgets('Ensure button is visible', (WidgetTester tester) async {
@@ -33,9 +33,9 @@ void main() {
           appBar: AppBar(
             title: const Text('Plugin example app'),
           ),
-          body: PDAXPlaceHolder(
-            title: PDAXConstants.defaultTitle,
-            description: PDAXConstants.defaultDescription,
+          body: DACPlaceHolder(
+            title: DACConstants.defaultTitle,
+            description: DACConstants.defaultDescription,
             hasButton: true,
           ),
         ),
@@ -54,9 +54,9 @@ void main() {
           appBar: AppBar(
             title: const Text('Plugin example app'),
           ),
-          body: PDAXPlaceHolder(
-            title: PDAXConstants.defaultTitle,
-            description: PDAXConstants.defaultDescription,
+          body: DACPlaceHolder(
+            title: DACConstants.defaultTitle,
+            description: DACConstants.defaultDescription,
             hasButton: false,
           ),
         ),

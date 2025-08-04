@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pdax_dialog/src/helpers/dialog_service.dart';
-import 'package:pdax_dialog/src/shared_widgets/custom_button.dart';
+import 'package:dac_dialog/src/helpers/dialog_service.dart';
+import 'package:dac_dialog/src/shared_widgets/custom_button.dart';
 import 'package:pointer_interceptor/pointer_interceptor.dart';
 
 typedef OnCancelCallback = VoidCallback;
@@ -41,7 +41,7 @@ typedef OnConfirmCallback = VoidCallback;
 ///     ),
 ///  );
 /// ```
-class DASDialog implements DialogService {
+class DACDialog implements DialogService {
   const DACDialog(
     this.context, {
     this.isDismissible = false,
@@ -128,7 +128,7 @@ class DASDialog implements DialogService {
 
   /// Any widget that is on top of the content.
   ///
-  /// If the [PDAXDialog.icon] is null, it will not be shown in the dialog.
+  /// If the [DACDialog.icon] is null, it will not be shown in the dialog.
   final Widget? icon;
 
   final String? title;
@@ -137,12 +137,12 @@ class DASDialog implements DialogService {
 
   /// This used to set the text for the positive action button.
   ///
-  /// If the [PDAXDialog.positiveActionText] is not set, the default value will be used.
+  /// If the [DACDialog.positiveActionText] is not set, the default value will be used.
   final String positiveActionText;
 
   /// This used to set the text for the negative action button.
   ///
-  /// If the [PDAXDialog.negativeActionText] is not set, the negative action button will not be shown.
+  /// If the [DACDialog.negativeActionText] is not set, the negative action button will not be shown.
   final String? negativeActionText;
 
   /// This used to set the alignment for the [DACDialog.description].
