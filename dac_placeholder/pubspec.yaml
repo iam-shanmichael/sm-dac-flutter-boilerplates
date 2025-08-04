@@ -1,5 +1,5 @@
-name: pdax_placeholder
-description: A customize Placeholder widget for PDAX.
+name: dac_placeholder
+description: A customize Placeholder widget for SM-DAC.
 version: 0.0.1
 
 environment:

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// A widget that can be used for representing data in [PDAXDataTableCell].
+/// A widget that can be used for representing data in [DACDataTableCell].
 ///
 /// Usage:
 ///
@@ -26,8 +26,8 @@ import 'package:flutter/material.dart';
 ///   ...
 /// }
 /// ```
-class PDAXDataTableCellText extends StatelessWidget {
-  const PDAXDataTableCellText(
+class DACDataTableCellText extends StatelessWidget {
+  const DACDataTableCellText(
     this.data, {
     Key? key,
     this.textStyle,

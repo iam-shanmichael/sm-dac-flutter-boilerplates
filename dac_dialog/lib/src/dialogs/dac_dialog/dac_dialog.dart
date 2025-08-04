@@ -41,8 +41,8 @@ typedef OnConfirmCallback = VoidCallback;
 ///     ),
 ///  );
 /// ```
-class PDAXDialog implements DialogService {
-  const PDAXDialog(
+class DASDialog implements DialogService {
+  const DACDialog(
     this.context, {
     this.isDismissible = false,
     this.dialogElevation = 8.0,
@@ -90,7 +90,7 @@ class PDAXDialog implements DialogService {
 
   /// This is used to set the minimum width of the dialog.
   ///
-  /// If the screen's width if greater than equal to `600.0`, the [PDAXDialog.dialogMinWidth] will be used.
+  /// If the screen's width if greater than equal to `600.0`, the [DACDialog.dialogMinWidth] will be used.
   /// Otherwise, the dialog will adapt the screen's width.
   ///
   /// The default value is `380.0`.
@@ -145,17 +145,17 @@ class PDAXDialog implements DialogService {
   /// If the [PDAXDialog.negativeActionText] is not set, the negative action button will not be shown.
   final String? negativeActionText;
 
-  /// This used to set the alignment for the [PDAXDialog.description].
+  /// This used to set the alignment for the [DACDialog.description].
   ///
   /// The default value is `TextAlign.center`.
   final TextAlign descriptionTextAlignment;
 
-  /// This used to set the text style for the [PDAXDialog.title].
+  /// This used to set the text style for the [DACDialog.title].
   ///
   /// If null, the default text style will be used.
   final TextStyle? titleTextStyle;
 
-  /// This used to set the text style for the [PDAXDialog.description].
+  /// This used to set the text style for the [DACDialog.description].
   ///
   /// If null, the default text style will be used.
   final TextStyle? descriptionTextStyle;

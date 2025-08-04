@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class PdaxTextField extends StatefulWidget {
-  const PdaxTextField({
+class DACTextField extends StatefulWidget {
+  const DACTextField({
     Key? key,
     required this.initialValue,
     this.controller,
@@ -76,10 +76,10 @@ class PdaxTextField extends StatefulWidget {
   final int? maxLength;
 
   @override
-  State<PdaxTextField> createState() => _PdaxTextFieldState();
+  State<DACTextField> createState() => _PdaxTextFieldState();
 }
 
-class _PdaxTextFieldState extends State<PdaxTextField> {
+class _DACTextFieldState extends State<DACTextField> {
   TextStyle? defaultTextStyle;
 
   TextStyle? defaultHintStyle;

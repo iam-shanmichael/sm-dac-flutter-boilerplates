@@ -1,7 +1,7 @@
 import 'package:example/data_sources/employee_data_source.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/pdax_data_table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -45,16 +45,16 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            PDAXDataTable(
+            DACDataTable(
               showCheckboxColumn: true,
               addEmptyRows: false,
               rowsPerPage: rowsPerPage,
               source: EmployeeDataSource(),
               columns: [
-                PDAXDataTableColumn(label: 'ID'),
-                PDAXDataTableColumn(label: 'Name'),
-                PDAXDataTableColumn(label: 'Designation'),
-                PDAXDataTableColumn(label: 'Salary'),
+                DACDataTableColumn(label: 'ID'),
+                DACDataTableColumn(label: 'Name'),
+                DACDataTableColumn(label: 'Designation'),
+                DACDataTableColumn(label: 'Salary'),
               ],
               paginatorSettings: DataTablePaginatorSettings(
                 availableRowsPerPage: <int>[10, 50, 100, 200],

@@ -1,5 +1,5 @@
-name: pdax_textfield
-description: A customize TextField widget for PDAX.
+name: dac_textfield
+description: A customize TextField widget for SM-DAC.
 version: 1.0.0
 
 environment:

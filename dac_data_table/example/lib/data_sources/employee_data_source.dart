@@ -1,5 +1,5 @@
 import 'package:example/models/employee.dart';
-import 'package:pdax_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/pdax_data_table.dart';
 
 class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
   final data = List<Employee>.generate(
@@ -17,17 +17,17 @@ class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
     return PDAXDataTableRow(
       onSelectChanged: (value) {},
       cells: [
-        PDAXDataTableCell(
-          PDAXDataTableCellText(currentRowData.id.toString()),
+        DACDataTableCell(
+          DACDataTableCellText(currentRowData.id.toString()),
         ),
-        PDAXDataTableCell(
-          PDAXDataTableCellText(currentRowData.name.toString()),
+        DACDataTableCell(
+          DACDataTableCellText(currentRowData.name.toString()),
         ),
-        PDAXDataTableCell(
-          PDAXDataTableCellText(currentRowData.designation.toString()),
+        DACDataTableCell(
+          DACDataTableCellText(currentRowData.designation.toString()),
         ),
-        PDAXDataTableCell(
-          PDAXDataTableCellText(currentRowData.salary.toString()),
+        DACDataTableCell(
+          DACDataTableCellText(currentRowData.salary.toString()),
         ),
       ],
     );

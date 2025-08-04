@@ -1,4 +1,4 @@
-name: pdax_data_table
+name: dac_data_table
 description: A widget that uses Flutter PaginatedDataTable widget and allowing pagination for server side responses.
 version: 1.0.1
 homepage:

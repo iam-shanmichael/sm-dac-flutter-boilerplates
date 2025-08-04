@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class PDAXConstants {
+class DACConstants {
   static double spacerHeight = 10;
 
   static Color defaultColor = const Color(0XFF3d81e8);

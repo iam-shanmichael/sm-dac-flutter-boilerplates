@@ -1,5 +1,5 @@
-name: pdax_placeholder_example
-description: Demonstrates how to use the pdax_placeholder plugin.
+name: dac_placeholder_example
+description: Demonstrates how to use the dac_placeholder plugin.
 
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
@@ -10,7 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  pdax_placeholder:
+  dac_placeholder:
     path: ../
   cupertino_icons: ^1.0.2
 

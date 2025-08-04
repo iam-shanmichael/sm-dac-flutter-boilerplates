@@ -1,4 +1,4 @@
-# PDAX Dialog
+# SM-DAC Dialog
 
 - Version: 1.0.1
 - Supported platforms: Android, iOS, & Web
@@ -20,16 +20,16 @@ A widget that shows custom dialog box with different variations.
 Once you clone this on your local computer, add the local path of this package on the `pubspec.yaml` file of your desired project .
 
 ```yaml
-  pdax_dialog: 
+  dac_dialog: 
     path: <PATH_ON_YOUR_LOCAL>
 ```
 
 ## Dialog Variations
-- `PDAXDialog`
+- `DACDialog`
     - Generic type of dialog, can be used for error prompts or warning.
-- `PDAXProgressDialog`
+- `DACProgressDialog`
     - Can be used on showing progress for example, uploading a file from the server or loading indicator.
-- `PDAXFileSelectDialog` 
+- `DACFileSelectDialog` 
     - Can be used for selecting files for upload.
 
 ## Example
@@ -39,7 +39,7 @@ You can find a simple example in the `/example` folder, below is the code of the
 import 'dart:async';
 import 'package:example/widgets/pdax_demo_button.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_dialog/pdax_dialog.dart';
+import 'package:DAC_dialog/DAC_dialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,11 +51,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PDAX Dialog Demo',
+      title: 'DAC Dialog Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'PDAX Dialog Demo'),
+      home: const MyHomePage(title: 'DAC Dialog Demo'),
     );
   }
 }
@@ -115,19 +115,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Generic Dialog',
               onPressed: () {
-                PDAXDialog(
+                DACDialog(
                   context,
                   title: 'This is a title',
                 ).show();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Dialog with Icon',
               onPressed: () {
-                PDAXDialog(
+                DACDialog(
                   context,
                   icon: const Icon(
                     Icons.circle_notifications,
@@ -138,10 +138,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ).show();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Confirmation Dialog',
               onPressed: () {
-                PDAXDialog(
+                DACDialog(
                   context,
                   icon: const Icon(
                     Icons.circle_notifications,
@@ -162,10 +162,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ).show();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Circular Progress Dialog',
               onPressed: () {
-                PDAXProgressDialog pd = PDAXProgressDialog(context);
+                DACProgressDialog pd = DACProgressDialog(context);
 
                 pd.show(
                   showPercentIndicator: true,
@@ -176,10 +176,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 downloadData();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Circular Progress Dialog',
               onPressed: () {
-                PDAXProgressDialog pd = PDAXProgressDialog(context);
+                DACProgressDialog pd = DACProgressDialog(context);
 
                 pd.show(
                   showPercentIndicator: true,
@@ -191,10 +191,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 downloadData();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'File Upload Dialog',
               onPressed: () {
-                PDAXFileSelectDialog(
+                DACFileSelectDialog(
                   context,
                   title: 'Upload Balance Correction',
                   supportedFormats: [FileFormat.csv, FileFormat.jpg],
@@ -225,7 +225,7 @@ If you're calling an API for download or upload, you refer to this example.
 ```dart
 var dio = new Dio();
 
-PDAXProgressDialog pd = PDAXProgressDialog(context);
+DACProgressDialog pd = DACProgressDialog(context);
 
 pd.show(
   showPercentIndicator: true,

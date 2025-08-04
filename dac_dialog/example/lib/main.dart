@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:example/widgets/pdax_demo_button.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_dialog/pdax_dialog.dart';
+import 'package:dac_dialog/pdax_dialog.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +13,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PDAX Dialog Demo',
+      title: 'SM-DAC Dialog Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'PDAX Dialog Demo'),
+      home: const MyHomePage(title: 'SM-DAC Dialog Demo'),
     );
   }
 }
@@ -53,7 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Generic Dialog',
               onPressed: () {
                 PDAXDialog(
@@ -62,10 +62,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 ).show();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Dialog with Icon',
               onPressed: () {
-                PDAXDialog(
+                DACDialog(
                   context,
                   icon: const Icon(
                     Icons.circle_notifications,
@@ -76,7 +76,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ).show();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Confirmation Dialog',
               onPressed: () {
                 PDAXDialog(
@@ -100,7 +100,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ).show();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Circular Progress Dialog',
               onPressed: () {
                 pd.show(
@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 downloadData();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'Linear Progress Dialog',
               onPressed: () {
                 pd.show(
@@ -125,10 +125,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 downloadData();
               },
             ),
-            PDAXDemoButton(
+            DACDemoButton(
               title: 'File Upload Dialog',
               onPressed: () {
-                PDAXFileSelectDialog(
+                DACFileSelectDialog(
                   context,
                   title: 'Upload Balance Correction',
                   supportedFormats: [FileFormat.csv, FileFormat.jpg],

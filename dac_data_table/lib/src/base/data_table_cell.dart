@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-/// Creates the [PDAXDataTableRow] for [PDAXDataTable] widget.
+/// Creates the [DACDataTableRow] for [DACDataTable] widget.
 ///
 /// This is extended to [DataCell] class from [DataTable].
-class PDAXDataTableCell extends DataCell {
+class DACDataTableCell extends DataCell {
   const PDAXDataTableCell(
     super.child, {
     super.placeholder,

@@ -1,7 +1,7 @@
-library pdax_data_table;
+library dac_data_table;
 
 export 'data_table_source.dart';
-export 'src/pdax_data_table_widget.dart';
+export 'src/dac_data_table_widget.dart';
 
 export 'src/base/data_table_column.dart';
 export 'src/base/data_table_row.dart';

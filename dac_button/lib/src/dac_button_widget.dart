@@ -1,9 +1,8 @@
-library pdax_button;
-
+library dac_button;
 import 'package:flutter/material.dart';
-
-class PDAXButton extends StatelessWidget {
-  const PDAXButton({
+import
+class DACButton extends StatelessWidget {
+  const DACButton({
     Key? key,
     required this.text,
     this.icon,

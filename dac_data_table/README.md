@@ -1,4 +1,4 @@
-# PDAX Data Table
+# SM-DAC Data Table
 
 - Version: 1.0.0
 - Supported platforms: Android, iOS, & Web
@@ -176,16 +176,16 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            PDAXDataTable(
+            DACDataTable(
               showCheckboxColumn: true,
               addEmptyRows: false,
               rowsPerPage: rowsPerPage,
               source: EmployeeDataSource(),
               columns: [
-                PDAXDataTableColumn(label: 'ID'),
-                PDAXDataTableColumn(label: 'Name'),
-                PDAXDataTableColumn(label: 'Designation'),
-                PDAXDataTableColumn(label: 'Salary'),
+                DACDataTableColumn(label: 'ID'),
+                DACDataTableColumn(label: 'Name'),
+                DACDataTableColumn(label: 'Designation'),
+                DACDataTableColumn(label: 'Salary'),
               ],
               paginatorSettings: DataTablePaginatorSettings(
                 availableRowsPerPage: <int>[10, 50, 100, 200],
@@ -210,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ```dart
 import 'package:example/models/employee.dart';
-import 'package:pdax_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/pdax_data_table.dart';
 
 class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
   final data = List<Employee>.generate(
@@ -222,22 +222,22 @@ class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
   int get selectedRowCount => 0;
 
   @override
-  PDAXDataTableRow? getRow(int index) {
+  DACDataTableRow? getRow(int index) {
     final currentRowData = lastDetails!.rows[index];
 
-    return PDAXDataTableRow(
+    return DACDataTableRow(
       onSelectChanged: (value) {},
       cells: [
-        PDAXDataTableCell(
+        DACDataTableCell(
           PDAXDataTableCellText(currentRowData.id.toString()),
         ),
-        PDAXDataTableCell(
+        DACDataTableCell(
           PDAXDataTableCellText(currentRowData.name.toString()),
         ),
-        PDAXDataTableCell(
+        DACDataTableCell(
           PDAXDataTableCellText(currentRowData.designation.toString()),
         ),
-        PDAXDataTableCell(
+        DACDataTableCell(
           PDAXDataTableCellText(currentRowData.salary.toString()),
         ),
       ],
@@ -270,9 +270,9 @@ class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
             @override
             Widget build(BuildContext context) {
                 return MaterialApp(
-                    title: 'PDAX Data Table Demo',
+                    title: 'DAC Data Table Demo',
                     theme: ThemeData(primarySwatch: Colors.blue),
-                    home: const MyHomePage(title: 'PDAX Data Table Home Page'),
+                    home: const MyHomePage(title: 'DAC Data Table Home Page'),
                     scrollBehavior: const MaterialScrollBehavior().copyWith(
                         dragDevices: {
                         PointerDeviceKind.mouse,

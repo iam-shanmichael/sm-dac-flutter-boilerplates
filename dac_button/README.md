@@ -1,4 +1,4 @@
-# PDAX Button
+# SM-DAC Button
 
 - Version: 1.0.0
 - Supported platforms: Android, iOS, & Web
@@ -15,7 +15,7 @@ A customize Button widget for PDAX.
 Once you clone this on your local computer, add the local path of this package on the `pubspec.yaml` file of your desired project .
 
 ```yaml
-pdax_button:
+dac_button:
   path: <PATH_ON_YOUR_LOCAL>
 ```
 
@@ -25,7 +25,7 @@ You can find a simple example in the `/example` folder, below is the code of the
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:pdax_button/pdax_button.dart';
+import 'package:dac_button/dac_button.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'PDAX Button Demo Home Page'),
+      home: const MyHomePage(title: 'SM-DAC Button Demo Home Page'),
     );
   }
 }
@@ -62,7 +62,7 @@ class MyHomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              PDAXButton(
+              DACButton(
                   text: 'Filled Button',
                   minWidth: 350,
                   width: 350,
@@ -71,7 +71,7 @@ class MyHomePage extends StatelessWidget {
                   },
               ),
               const SizedBox(height: 15),
-              PDAXButton(
+              DACButton(
                 text: 'Disabled Button',
                 isEnabled: false,
                 minWidth: 350,
@@ -81,7 +81,7 @@ class MyHomePage extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 15),
-              PDAXButton(
+              DACButton(
                 text: 'Outlined Button',
                 borderColor: const Color(0xFF2274E5),
                 isOutlined: true,
@@ -92,7 +92,7 @@ class MyHomePage extends StatelessWidget {
                 },
               ),
               const SizedBox(height: 15),
-              PDAXButton(
+              DACButton(
                 text: 'Button with Icon',
                 icon: const Icon(Icons.accessibility_new_sharp),
                 minWidth: 350,

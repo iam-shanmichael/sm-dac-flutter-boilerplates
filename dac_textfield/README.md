@@ -1,4 +1,4 @@
-# PDAX TextField
+# DAC TextField
 
 - Version: 1.0.0
 - Supported platforms: Android, iOS, & Web
@@ -25,7 +25,7 @@ You can find a simple example in the `/example` folder, below is the code of the
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:pdax_textfield/pdax_text_field.dart';
+import 'package:dac_textfield/dac_text_field.dart';
 
 void main() {
   runApp(const MyApp());
@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: const Center(
-          child: PdaxTextField(
+          child: DACTextField(
             hintText: 'Hello',
             isCurrency: true,
           ),

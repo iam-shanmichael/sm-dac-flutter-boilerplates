@@ -1,7 +1,7 @@
 import 'package:advanced_datatable/advanced_datatable_source.dart';
 import 'package:flutter/material.dart';
 
-/// This is the settings used for the paginator of [PDAXDataTable].
+/// This is the settings used for the paginator of [DACDataTable].
 ///
 /// Usage:
 ///
@@ -25,7 +25,7 @@ class DataTablePaginatorSettings {
     this.customPaginator,
   });
 
-  /// This is used when the user wants to show the jump to the first or last page of the [PDAXDataTable].
+  /// This is used when the user wants to show the jump to the first or last page of the [DACDataTable].
   ///
   /// Default value is `true`.
   final bool showFirstLastButtons;

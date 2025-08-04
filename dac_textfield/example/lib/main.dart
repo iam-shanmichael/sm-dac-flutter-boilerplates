@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdax_textfield/pdax_text_field.dart';
+import 'package:dac_textfield/dac_text_field.dart';
 
 void main() {
   runApp(const MyApp());
@@ -26,7 +26,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('Plugin example app'),
         ),
         body: const Center(
-          child: PdaxTextField(
+          child: DACTextField(
             initialValue: 'Hello',
             hintText: 'Hint',
             isCurrency: true,

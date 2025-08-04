@@ -24,21 +24,21 @@ class TestSource extends AdvancedDataTableSource<TestData> {
   }
 
   @override
-  PDAXDataTableRow? getRow(int index) {
+  DACDataTableRow? getRow(int index) {
     final cells = [
-      PDAXDataTableCell(
-        PDAXDataTableCellText((lastOffset + index).toString()),
+      DACDataTableCell(
+        DACDataTableCellText((lastOffset + index).toString()),
       ),
     ];
     if (twoColumn) {
       cells.add(
-        const PDAXDataTableCell(
-          PDAXDataTableCellText('Column two'),
+        const DACDataTableCell(
+          DACDataTableCellText('Column two'),
         ),
       );
     }
 
-    return PDAXDataTableRow(cells: cells);
+    return DACDataTableRow(cells: cells);
   }
 
   DateTime? lastLoad;

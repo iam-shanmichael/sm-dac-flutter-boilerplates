@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-/// Creates the [PDAXDataTableColumn] for [PDAXDataTable] widget.
-class PDAXDataTableColumn {
-  PDAXDataTableColumn({
+/// Creates the [DACDataTableColumn] for [DACDataTable] widget.
+class DACDataTableColumn {
+  DACDataTableColumn({
     required this.label,
     this.labelTextStyle,
     this.tooltip,
@@ -10,7 +10,7 @@ class PDAXDataTableColumn {
     this.onSort,
   });
 
-  /// This represents the column names for [PDAXDataTable].
+  /// This represents the column names for [DACDataTable].
   final String label;
 
   /// This is used to adjust the style of the column names.

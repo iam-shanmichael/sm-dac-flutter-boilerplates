@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pdax_placeholder/pdax_placeholder.dart';
+import 'package:dac_placeholder/pdax_placeholder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -27,10 +27,10 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Column(
           children: [
-            PDAXPlaceHolder(
+            DACPlaceHolder(
               icon: const Icon(Icons.abc, size: 300),
-              title: PDAXConstants.defaultTitle,
-              description: PDAXConstants.defaultDescription,
+              title: DACConstants.defaultTitle,
+              description: DACConstants.defaultDescription,
               hasButton: true,
             ),
           ],

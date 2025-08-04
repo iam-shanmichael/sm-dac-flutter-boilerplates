@@ -31,8 +31,8 @@ import 'package:pdax_data_table/pdax_data_table.dart';
 ///     ),
 ///  );
 /// ```
-class PDAXDataTable extends StatelessWidget {
-  const PDAXDataTable({
+class DACDataTable extends StatelessWidget {
+  const DACDataTable({
     Key? key,
     required this.source,
     required this.columns,
@@ -65,11 +65,11 @@ class PDAXDataTable extends StatelessWidget {
   /// The configuration and labels for the columns in the table.
   ///
   /// This is `required`.
-  final List<PDAXDataTableColumn> columns;
+  final List<DACDataTableColumn> columns;
 
   /// This is used when the user want to have checkboxes on each row.
   ///
-  /// Make sure that the [PDAXDataTableRow.onSelectChanged] is not null, otherwise the checkbox will still not be shown.
+  /// Make sure that the [DACDataTableRow.onSelectChanged] is not null, otherwise the checkbox will still not be shown.
   ///
   /// The default value is `false`.
   final bool showCheckboxColumn;
@@ -79,7 +79,7 @@ class PDAXDataTable extends StatelessWidget {
   /// The default value is `true`.
   final bool showHorizontalScrollbarAlways;
 
-  /// Whether the column mentioned in [PDAXDataTable.columnToSort], if any, is sorted in ascending order.
+  /// Whether the column mentioned in [DACDataTable.columnToSort], if any, is sorted in ascending order.
   ///
   /// The default value is `true`.
   final bool sortAscending;
@@ -124,14 +124,14 @@ class PDAXDataTable extends StatelessWidget {
   ///
   /// This value defaults to `24.0` to adhere to the Material Design specifications.
   ///
-  /// If [PDAXDataTable.checkboxHorizontalMargin] is null, then [PDAXDataTable.checkboxHorizontalMargin] is also the
+  /// If [DACDataTable.checkboxHorizontalMargin] is null, then [DACDataTable.checkboxHorizontalMargin] is also the
   /// margin between the edge of the table and the checkbox, as well as the
   /// margin between the checkbox and the content in the first data column.
   final double horizontalMargin;
 
   /// Horizontal margin around the checkbox, if it is displayed.
   ///
-  /// If null, then [PDAXDataTable.horizontalMargin] is used as the margin between the edge
+  /// If null, then [DACDataTable.horizontalMargin] is used as the margin between the edge
   /// of the table and the checkbox, as well as the margin between the checkbox
   /// and the content in the first data column. This value defaults to `24.0`.
   final double? checkboxHorizontalMargin;

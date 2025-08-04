@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:pdax_data_table/src/base/data_table_cell.dart';
 
-/// Creates the [PDAXDataTableRow] for [PDAXDataTable] widget.
+/// Creates the [DACDataTableRow] for [DACDataTable] widget.
 ///
 /// This is extended to [DataRow] class from [DataTable].
-class PDAXDataTableRow extends DataRow {
-  const PDAXDataTableRow({
+class DACDataTableRow extends DataRow {
+  const DACDataTableRow({
     super.key,
-    required List<PDAXDataTableCell> cells,
+    required List<DACDataTableCell> cells,
     super.selected,
     super.color,
     super.onSelectChanged,
     super.onLongPress,
   }) : super(cells: cells);
 
-  const PDAXDataTableRow.byIndex({
+  const DACDataTableRow.byIndex({
     int? index,
-    required List<PDAXDataTableCell> cells,
+    required List<DACDataTableCell> cells,
     super.selected,
     super.color,
     super.onSelectChanged,

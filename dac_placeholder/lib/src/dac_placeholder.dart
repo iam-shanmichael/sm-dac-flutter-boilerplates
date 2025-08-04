@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pdax_placeholder/pdax_placeholder.dart';
 
-class PDAXPlaceHolder extends StatelessWidget {
+class DACPlaceHolder extends StatelessWidget {
   const PDAXPlaceHolder({
     required this.hasButton,
     required this.title,
@@ -53,30 +53,30 @@ class PDAXPlaceHolder extends StatelessWidget {
             child: icon ?? const Placeholder(),
           ),
           SizedBox(
-            height: PDAXConstants.spacerHeight * 4,
+            height: DACConstants.spacerHeight * 4,
           ),
           Text(
-            title ?? PDAXConstants.defaultTitle,
-            style: titleTextStyle ?? PDAXConstants.defaultTitleTextStyle,
+            title ?? DACConstants.defaultTitle,
+            style: titleTextStyle ?? DACConstants.defaultTitleTextStyle,
           ),
           SizedBox(
-            height: PDAXConstants.spacerHeight,
+            height: DACConstants.spacerHeight,
           ),
           Text(
-            description ?? PDAXConstants.defaultDescription,
-            style: descriptionTextStyle ?? PDAXConstants.defaultDescriptionTextStyle,
+            description ?? DACConstants.defaultDescription,
+            style: descriptionTextStyle ?? DACConstants.defaultDescriptionTextStyle,
           ),
           if (hasButton)
             Column(
               children: [
                 SizedBox(
-                  height: PDAXConstants.spacerHeight * 4,
+                  height: DACConstants.spacerHeight * 4,
                 ),
                 ElevatedButton(
                   onPressed: onPressed,
                   child: Text(
-                    buttonText ?? PDAXConstants.defaultButtonText,
-                    style: buttonTextStyle ?? PDAXConstants.defaultButtonTextStyle,
+                    buttonText ?? DACConstants.defaultButtonText,
+                    style: buttonTextStyle ?? DACConstants.defaultButtonTextStyle,
                   ),
                 )
               ],

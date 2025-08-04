@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:pdax_button/pdax_button.dart';
+import 'package:dac_button/dac_button.dart';
 
 void main() {
   Widget testWidget({VoidCallback? onPressed, bool isEnabled = true, Icon? icon, bool isOutlined = false}) {
@@ -10,8 +10,8 @@ void main() {
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: PDAXButton(
-            text: 'PDAX Button',
+          child: DACButton(
+            text: 'DAC Button',
             minWidth: 350,
             width: 350,
             onPressed: onPressed,

@@ -17,7 +17,7 @@ typedef OnCancelUploadCallback = VoidCallback;
 ///     child: ElevatedButton(
 ///       child: Text('Show Progress Dialog Button'),
 ///       onPressed: () {
-///         PDAXFileSelectDialog(
+///         DACFileSelectDialog(
 ///           context,
 ///           title: 'Upload Balance Correction',
 ///           supportedFormats: [FileFormat.csv, FileFormat.jpg],
@@ -29,8 +29,8 @@ typedef OnCancelUploadCallback = VoidCallback;
 ///     ),
 ///  );
 /// ```
-class PDAXFileSelectDialog implements DialogService {
-  const PDAXFileSelectDialog(
+class DACFileSelectDialog implements DialogService {
+  const DACFileSelectDialog(
     this.context, {
     this.supportedFormats,
     this.withData = true,
@@ -100,7 +100,7 @@ class PDAXFileSelectDialog implements DialogService {
 
   /// This is used to set the minimum width of the dialog.
   ///
-  /// If the screen's width if greater than equal to `600.0`, the [PDAXDialog.dialogMinWidth] will be used.
+  /// If the screen's width if greater than equal to `600.0`, the [DACDialog.dialogMinWidth] will be used.
   /// Otherwise, the dialog will adapt the screen's width.
   ///
   /// The default value is `490.0`.

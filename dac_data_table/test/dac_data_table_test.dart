@@ -10,9 +10,9 @@ void main() {
   Widget testWidget() {
     return MaterialApp(
       home: Scaffold(
-        body: PDAXDataTable(
+        body: DACDataTable(
           columns: [
-            PDAXDataTableColumn(label: 'Id'),
+            DACDataTableColumn(label: 'Id'),
           ],
           source: source,
         ),
@@ -60,7 +60,7 @@ void main() {
           home: MaterialApp(
             home: Scaffold(
               body: SingleChildScrollView(
-                child: PDAXDataTable(
+                child: DACDataTable(
                   source: TestSource(),
                   rowsPerPage: rowsPerPage ?? 10,
                   columns: [
