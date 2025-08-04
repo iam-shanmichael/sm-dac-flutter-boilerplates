@@ -29,7 +29,7 @@ void main() {
     await widgetTester.pumpWidget(testWidget());
 
     expect(find.byType(ElevatedButton), findsOneWidget);
-    expect(find.textContaining('PDAX Button'), findsOneWidget);
+    expect(find.textContaining('DAC Button'), findsOneWidget);
   });
 
   testWidgets('Button can be tapped', (widgetTester) async {
@@ -62,7 +62,7 @@ void main() {
     await widgetTester.pumpWidget(testWidget(isOutlined: true));
 
     expect(find.byType(OutlinedButton), findsOneWidget);
-    expect(find.textContaining('PDAX Button'), findsOneWidget);
+    expect(find.textContaining('DAC Button'), findsOneWidget);
   });
 
 

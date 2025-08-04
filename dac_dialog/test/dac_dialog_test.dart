@@ -42,7 +42,7 @@ void main() {
   testWidgets('Ensure that the dialog is showing', (WidgetTester tester) async {
     await tester.pumpWidget(
       testWidget(
-        title: 'PDAX Dialog',
+        title: 'DAC Dialog',
         description: 'This is a description.',
       ),
     );
@@ -53,7 +53,7 @@ void main() {
     expect(find.byType(Dialog), findsOneWidget);
 
     // Find the title
-    expect(find.textContaining('PDAX Dialog'), findsOneWidget);
+    expect(find.textContaining('DAC Dialog'), findsOneWidget);
 
     // Find the description
     expect(find.textContaining('This is a description.'), findsOneWidget);
@@ -67,7 +67,7 @@ void main() {
     await tester.pumpWidget(
       testWidget(
         isDismissible: true,
-        title: 'PDAX Dialog',
+        title: 'DAC Dialog',
         description: 'This is a description.',
       ),
     );
@@ -85,7 +85,7 @@ void main() {
 
     await tester.pumpWidget(
       testWidget(
-        title: 'PDAX Dialog',
+        title: 'DAC Dialog',
         description: 'This is a description.',
       ),
     );
@@ -110,7 +110,7 @@ void main() {
           size: 80.0,
           color: Colors.blue,
         ),
-        title: 'PDAX Dialog',
+        title: 'DAC Dialog',
         description: 'This is a description.',
       ),
     );
@@ -134,7 +134,7 @@ void main() {
           size: 80.0,
           color: Colors.blue,
         ),
-        title: 'PDAX Dialog',
+        title: 'DAC Dialog',
         description: 'This is a description.',
         onConfirm: () {
           isConfirmed = !isConfirmed;
@@ -167,7 +167,7 @@ void main() {
           size: 80.0,
           color: Colors.blue,
         ),
-        title: 'PDAX Dialog',
+        title: 'DAC Dialog',
         description: 'This is a description.',
         onConfirm: () {
           isConfirmed = !isConfirmed;

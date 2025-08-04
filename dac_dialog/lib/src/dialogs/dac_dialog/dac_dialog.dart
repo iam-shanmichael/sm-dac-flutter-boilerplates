@@ -18,7 +18,7 @@ typedef OnConfirmCallback = VoidCallback;
 ///     child: ElevatedButton(
 ///       child: Text('Show Dialog Button'),
 ///       onPressed: () {
-///         PDAXDialog(
+///         DACDialog(
 ///           context,
 ///           icon: const Icon(
 ///             Icons.circle_notifications,

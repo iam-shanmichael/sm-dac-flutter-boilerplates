@@ -142,45 +142,45 @@ class DACFileSelectDialog implements DialogService {
 
   /// This used to set the text for the positive action button.
   ///
-  /// If the [PDAXFileSelectDialog.positiveActionText] is not set, the default value will be used.
+  /// If the [DACpositiveActionText] is not set, the default value will be used.
   final String positiveActionText;
 
   /// This used to set the text for the negative action button.
   ///
-  /// If the [PDAXFileSelectDialog.negativeActionText] is not set, the negative action button will not be shown.
+  /// If the [DACnegativeActionText] is not set, the negative action button will not be shown.
   final String negativeActionText;
 
   /// This used to set the text for the selecting files.
   ///
-  /// If the [PDAXFileSelectDialog.fileSelectText] is not set, the default value will be used.
+  /// If the [DACfileSelectText] is not set, the default value will be used.
   final String fileSelectText;
 
   /// This used to set the text for the clearing selected files.
   ///
-  /// If the [PDAXFileSelectDialog.clearSelectionText] is not set, the default value will be used.
+  /// If the [DACFileSelectDialog.clearSelectionText] is not set, the default value will be used.
   final String clearSelectionText;
 
   /// This used to set the text for the browsing files placeholder.
   ///
-  /// If the [PDAXFileSelectDialog.browsePlaceholderText] is not set, the default value will be used.
+  /// If the [DACFileSelectDialog.browsePlaceholderText] is not set, the default value will be used.
   final String browsePlaceholderText;
 
-  /// This used to set the text style for the [PDAXFileSelectDialog.title].
+  /// This used to set the text style for the [DACFileSelectDialog.title].
   ///
   /// If null, the default text style will be used.
   final TextStyle? titleTextStyle;
 
-  /// This used to set the text style for the [PDAXFileSelectDialog.fileSelectText].
+  /// This used to set the text style for the [DACFileSelectDialog.fileSelectText].
   ///
   /// If null, the default text style will be used.
   final TextStyle? fileSelectTextStyle;
 
-  /// This used to set the text style for the [PDAXFileSelectDialog.clearSelectionText].
+  /// This used to set the text style for the [DACFileSelectDialog.clearSelectionText].
   ///
   /// If null, the default text style will be used.
   final TextStyle? clearSelectionTextStyle;
 
-  /// This used to set the text style for the [PDAXFileSelectDialog.browsePlaceholderText].
+  /// This used to set the text style for the [DACFileSelectDialog.browsePlaceholderText].
   ///
   /// If null, the default text style will be used.
   final TextStyle? browsePlaceholderTextStyle;

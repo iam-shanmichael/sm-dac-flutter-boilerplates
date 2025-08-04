@@ -1,6 +1,6 @@
-# pdax_placeholder_example
+# dac_placeholder_example
 
-Demonstrates how to use the pdax_placeholder_example plugin.
+Demonstrates how to use the dac_placeholder_example plugin.
 
 ## Getting Started
 

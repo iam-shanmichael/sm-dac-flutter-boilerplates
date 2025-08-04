@@ -15,7 +15,7 @@ import 'package:pointer_interceptor/pointer_interceptor.dart';
 ///     child: ElevatedButton(
 ///       child: Text('Show Progress Dialog Button'),
 ///       onPressed: () {
-///         PDAXProgressDialog pd = PDAXProgressDialog(context);
+///         DACProgressDialog pd = DACProgressDialog(context);
 ///
 ///         pd.show(
 ///           showPercentIndicator: true,
@@ -145,7 +145,7 @@ class DACProgressDialog {
     }
   }
 
-  /// This will determine if the [PDAXProgressDialog] is open.
+  /// This will determine if the [DACProgressDialog] is open.
   bool get isOpen => _dialogIsOpen;
 
   double get _screenWidth => MediaQuery.of(context).size.width;

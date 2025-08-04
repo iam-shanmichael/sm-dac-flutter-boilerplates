@@ -11,13 +11,13 @@ import 'package:flutter/material.dart';
 ///   ];
 ///
 ///   @override
-///   PDAXDataTableRow? getRow(int index) {
+///   DACDataTableRow? getRow(int index) {
 ///     final currentRowData = lastDetails!.rows[index];
 ///
-///     return PDAXDataTableRow(
+///     return DACDataTableRow(
 ///       cells: [
-///         PDAXDataTableCell(
-///           PDAXDataTableCellText(currentRowData.id.toString()),
+///         DACDataTableCell(
+///           DACDataTableCellText(currentRowData.id.toString()),
 ///         ),
 ///       ],
 ///     );

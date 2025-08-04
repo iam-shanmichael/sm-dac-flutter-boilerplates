@@ -16,7 +16,7 @@ class DACDemoButton extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: 20.0),
       child: ElevatedButton(
         onPressed: onPressed,
-        child: Text(title ?? 'PDAX Demo'),
+        child: Text(title ?? 'DAC Demo'),
       ),
     );
   }

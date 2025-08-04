@@ -1,4 +1,4 @@
-library pdax_dialog;
+library dac_dialog;
 
 export 'src/enums/progress_type.dart';
 export 'src/enums/file_format.dart';

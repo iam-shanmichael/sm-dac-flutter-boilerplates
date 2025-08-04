@@ -40,7 +40,7 @@ void main() {
 
   testWidgets('File select dialog is showing', (WidgetTester tester) async {
     await tester.pumpWidget(
-      testWidget(title: 'PDAX File Select Dialog'),
+      testWidget(title: 'DAC File Select Dialog'),
     );
     expect(find.byType(ElevatedButton), findsOneWidget);
 
@@ -49,7 +49,7 @@ void main() {
     expect(find.byType(Dialog), findsOneWidget);
 
     // Find the title
-    expect(find.textContaining('PDAX File Select Dialog'), findsOneWidget);
+    expect(find.textContaining('DAC File Select Dialog'), findsOneWidget);
 
     // Find the file selection menus
     expect(find.textContaining('Select Files'), findsOneWidget);
@@ -66,7 +66,7 @@ void main() {
     FlutterError.onError = ignoreOverflowErrors;
 
     await tester.pumpWidget(
-      testWidget(isDismissible: true, title: 'PDAX File Select Dialog'),
+      testWidget(isDismissible: true, title: 'DAC File Select Dialog'),
     );
 
     await tester.tap(find.byType(ElevatedButton));
@@ -80,7 +80,7 @@ void main() {
     await tester.pumpAndSettle(const Duration(seconds: 1));
     expect(find.byType(Dialog), findsNothing);
 
-    await tester.pumpWidget(testWidget(title: 'PDAX File Select Dialog'));
+    await tester.pumpWidget(testWidget(title: 'DAC File Select Dialog'));
 
     await tester.tap(find.byType(ElevatedButton));
     await tester.pump();

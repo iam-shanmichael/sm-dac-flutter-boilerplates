@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 /// Usage:
 ///
 /// ```dart
-/// PDAXDataTable(
+/// DACDataTable(
 ///   source: ExampleDataSource(),
 ///   columns: [...],
 ///   paginatorSettings: DataTablePaginatorSettings(

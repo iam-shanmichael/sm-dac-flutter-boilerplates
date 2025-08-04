@@ -1,6 +1,6 @@
-# pdax_textfield_example
+# dac_textfield_example
 
-Demonstrates how to use the pdax_textfield plugin.
+Demonstrates how to use the dac_textfield plugin.
 
 ## Getting Started
 
