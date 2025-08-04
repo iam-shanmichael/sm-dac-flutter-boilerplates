@@ -1,13 +1,13 @@
-# DAC TextField
+# SM-DAC TextField
 
 - Version: 1.0.0
 - Supported platforms: Android, iOS, & Web
 
-A customize TextField widget for PDAX.
+A customize TextField widget for SM-DAC.
 
 ## Features
 
-- Can be used for the default textfield behavior for PDAX products.
+- Can be used for the default textfield behavior for SM-DAC products.
 - Can be used as a textfield with currency behavior.
 
 ## Installation via Github repo
@@ -15,7 +15,7 @@ A customize TextField widget for PDAX.
 Once you clone this on your local computer, add the local path of this package on the `pubspec.yaml` file of your desired project .
 
 ```yaml
-pdax_text_field:
+dac_text_field:
   path: <PATH_ON_YOUR_LOCAL>
 ```
 

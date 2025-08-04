@@ -15,12 +15,12 @@ import 'package:dac_data_table/dac_data_table.dart';
 ///  return SingleChildScrollView(
 ///     child: Column(
 ///       children: [
-///         PDAXDataTable(
+///         DACDataTable(
 ///          rowsPerPage: 10,
 ///           source: ExampleDataSource(),
 ///           columns: [
-///             PDAXDataTableColumn(label: 'ID'),
-///             PDAXDataTableColumn(label: 'Name'),
+///             DACDataTableColumn(label: 'ID'),
+///             DACDataTableColumn(label: 'Name'),
 ///           ],
 ///           paginatorSettings: DataTablePaginatorSettings(
 ///             availableRowsPerPage: <int>[10, 50, 100, 200],

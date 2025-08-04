@@ -18,7 +18,7 @@ A widget that uses Flutter [PaginatedDataTable](https://api.flutter.dev/flutter/
 Once you clone this on your local computer, add the local path of this package on the `pubspec.yaml` file of your desired project .
 
 ```yaml
-  pdax_data_table: 
+  dac_data_table: 
     path: <PATH_ON_YOUR_LOCAL>
 ```
 
@@ -132,7 +132,7 @@ You can find a simple example in the `/example` folder, below is the code of the
 import 'package:example/data_sources/employee_data_source.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:pdax_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/dac_data_table.dart';
 
 void main() {
   runApp(const MyApp());
@@ -144,9 +144,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'PDAX Data Table Demo',
+      title: 'SM-DAC Data Table Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
-      home: const MyHomePage(title: 'PDAX Data Table Home Page'),
+      home: const MyHomePage(title: 'SM-DAC Data Table Home Page'),
       scrollBehavior: const MaterialScrollBehavior().copyWith(
         dragDevices: {
           PointerDeviceKind.mouse,
@@ -210,7 +210,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 ```dart
 import 'package:example/models/employee.dart';
-import 'package:dac_data_table/pdax_data_table.dart';
+import 'package:dac_data_table/dac_data_table.dart';
 
 class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
   final data = List<Employee>.generate(
@@ -229,16 +229,16 @@ class EmployeeDataSource extends AdvancedDataTableSource<Employee> {
       onSelectChanged: (value) {},
       cells: [
         DACDataTableCell(
-          PDAXDataTableCellText(currentRowData.id.toString()),
+          DACDataTableCellText(currentRowData.id.toString()),
         ),
         DACDataTableCell(
-          PDAXDataTableCellText(currentRowData.name.toString()),
+          DACDataTableCellText(currentRowData.name.toString()),
         ),
         DACDataTableCell(
-          PDAXDataTableCellText(currentRowData.designation.toString()),
+          DACDataTableCellText(currentRowData.designation.toString()),
         ),
         DACDataTableCell(
-          PDAXDataTableCellText(currentRowData.salary.toString()),
+          DACDataTableCellText(currentRowData.salary.toString()),
         ),
       ],
     );

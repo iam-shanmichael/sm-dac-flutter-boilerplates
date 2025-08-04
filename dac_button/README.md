@@ -3,12 +3,12 @@
 - Version: 1.0.0
 - Supported platforms: Android, iOS, & Web
 
-A customize Button widget for PDAX.
+A customize Button widget for SM-DAC.
 
 ## Features
 
-- Can be used for the default button behavior for PDAX products.
-- Can be used for customise button for PDAX products.
+- Can be used for the default button behavior for SM-DAC products.
+- Can be used for customise button for SM-DAC products.
 
 ## Installation via Github repo
 

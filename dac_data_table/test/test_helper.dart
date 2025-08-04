@@ -1,4 +1,5 @@
 import 'package:dac_data_table/dac_data_table.dart';
+import 'package:flutter/material.dart';
 
 class TestData {
   final int index;
@@ -27,7 +28,7 @@ class TestSource extends AdvancedDataTableSource<TestData> {
   DACDataTableRow? getRow(int index) {
     final cells = [
       DACDataTableCell(
-        DACDataTableCellText(lastOffset + index).toString(),
+        Text((lastOffset + index).toString()),
       ),
       
     ];

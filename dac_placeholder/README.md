@@ -3,11 +3,11 @@
 - Version: 1.0.0
 - Supported platforms: Android, iOS, & Web
 
-A customize Placeholder widget for PDAX.
+A customize Placeholder widget for SM-DAC.
 
 ## Features
 
-- Can be used for the default Placeholder behavior for PDAX products.
+- Can be used for the default Placeholder behavior for DAC products.
 
 ## Installation via Github repo
 
@@ -24,7 +24,7 @@ You can find a simple example in the `/example` folder, below is the code of the
 
 ```dart
 import 'package:flutter/material.dart';
-import 'package:pdax_placeholder/pdax_placeholder.dart';
+import 'package:dac_placeholder/dac_placeholder.dart';
 
 void main() {
   runApp(const MyApp());

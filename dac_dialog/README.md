@@ -37,7 +37,7 @@ You can find a simple example in the `/example` folder, below is the code of the
 
 ```dart
 import 'dart:async';
-import 'package:example/widgets/pdax_demo_button.dart';
+import 'package:example/widgets/dac_demo_button.dart';
 import 'package:flutter/material.dart';
 import 'package:DAC_dialog/DAC_dialog.dart';
 
@@ -73,7 +73,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late PDAXProgressDialog pd;
+  late DACProgressDialog pd;
 
   int value = 0;
 
@@ -103,7 +103,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   void initState() {
-    pd = PDAXProgressDialog(context);
+    pd = DACProgressDialog(context);
     super.initState();
   }
 
@@ -218,7 +218,7 @@ class _MyHomePageState extends State<MyHomePage> {
 }
 ```
 
-## Example Usage of PDAXProgressDialog with Dio
+## Example Usage of DACProgressDialog with Dio
 
 If you're calling an API for download or upload, you refer to this example.
 
