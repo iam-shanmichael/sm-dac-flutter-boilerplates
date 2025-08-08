@@ -1,3 +1,12 @@
+/*
+*******************************************************************
+* @Copyright         : 2025 DAC Button
+* @File Name         : dac_button.dart
+* @Description       : SM-DAC button boilerplate widget
+* @Author            : SM-DAC
+*******************************************************************
+*/
+
 library dac_button;
 import 'package:flutter/material.dart';
 
@@ -100,18 +109,18 @@ class DACButton extends StatelessWidget {
   Widget _buildDefaultButton() {
     return ElevatedButton(
       style: ButtonStyle(
-        minimumSize: MaterialStateProperty.all<Size?>(
+        minimumSize: WidgetStateProperty.all<Size?>(
           Size(minWidth, minHeight),
         ),
-        fixedSize: MaterialStateProperty.all<Size?>(
+        fixedSize: WidgetStateProperty.all<Size?>(
           Size(width, height),
         ),
-        elevation: MaterialStateProperty.all<double?>(elevation),
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(padding),
-        backgroundColor: MaterialStateProperty.resolveWith<Color?>(
+        elevation: WidgetStateProperty.all<double?>(elevation),
+        padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(padding),
+        backgroundColor: WidgetStateProperty.resolveWith<Color?>(
           getBackgroundColor,
         ),
-        shape: MaterialStateProperty.resolveWith(getFocusBorder),
+        shape: WidgetStateProperty.resolveWith(getFocusBorder),
       ),
       onPressed: (isEnabled) ? onPressed : null,
       child: Row(
@@ -144,19 +153,19 @@ class DACButton extends StatelessWidget {
   Widget _buildOutlinedButton() {
     return OutlinedButton(
       style: ButtonStyle(
-        minimumSize: MaterialStateProperty.all<Size?>(
+        minimumSize: WidgetStateProperty.all<Size?>(
           Size(minWidth, minHeight),
         ),
-        fixedSize: MaterialStateProperty.all<Size?>(
+        fixedSize: WidgetStateProperty.all<Size?>(
           Size(width, height),
         ),
-        elevation: MaterialStateProperty.all<double?>(elevation),
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry?>(padding),
-        backgroundColor: MaterialStateProperty.all<Color?>((isOutlined) ? Colors.transparent : fillColor ),
-        side: MaterialStateProperty.resolveWith<BorderSide?>(
+        elevation: WidgetStateProperty.all<double?>(elevation),
+        padding: WidgetStateProperty.all<EdgeInsetsGeometry?>(padding),
+        backgroundColor: WidgetStateProperty.all<Color?>((isOutlined) ? Colors.transparent : fillColor ),
+        side: WidgetStateProperty.resolveWith<BorderSide?>(
           getOutlineBorderColor,
         ),
-        shape: MaterialStateProperty.all<OutlinedBorder?>(
+        shape: WidgetStateProperty.all<OutlinedBorder?>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(borderRadius),
           ),
@@ -186,11 +195,11 @@ class DACButton extends StatelessWidget {
     );
   }
 
-  OutlinedBorder? getFocusBorder(Set<MaterialState> states) {
-    const Set<MaterialState> interactiveStates = <MaterialState>{
-      MaterialState.pressed,
-      MaterialState.hovered,
-      MaterialState.focused,
+  OutlinedBorder? getFocusBorder(Set<WidgetState> states) {
+    const Set<WidgetState> interactiveStates = <WidgetState>{
+      WidgetState.pressed,
+      WidgetState.hovered,
+      WidgetState.focused,
     };
     if (states.any(interactiveStates.contains)) {
       return RoundedRectangleBorder(
@@ -206,9 +215,9 @@ class DACButton extends StatelessWidget {
     );
   }
 
-  Color? getBackgroundColor(Set<MaterialState> states) {
-    const Set<MaterialState> interactiveStates = <MaterialState>{
-      MaterialState.disabled,
+  Color? getBackgroundColor(Set<WidgetState> states) {
+    const Set<WidgetState> interactiveStates = <WidgetState>{
+      WidgetState.disabled,
     };
 
     if (states.any(interactiveStates.contains)) {
@@ -218,9 +227,9 @@ class DACButton extends StatelessWidget {
     return isFilled ? fillColor : Colors.transparent;
   }
 
-  BorderSide? getOutlineBorderColor(Set<MaterialState> states) {
-    const Set<MaterialState> interactiveStates = <MaterialState>{
-      MaterialState.disabled,
+  BorderSide? getOutlineBorderColor(Set<WidgetState> states) {
+    const Set<WidgetState> interactiveStates = <WidgetState>{
+      WidgetState.disabled,
     };
 
     if (states.any(interactiveStates.contains)) {

@@ -23,7 +23,7 @@ class EmptySelectionPlaceholder extends StatelessWidget {
                 ? textStyle
                 : TextStyle(
                     fontSize: 16.0,
-                    color: const Color(0xFF2274E5).withOpacity(0.60),
+                    color: const Color(0xFF2274E5).withValues(alpha: 0.60),
                     fontWeight: FontWeight.w800,
                   ),
           ),

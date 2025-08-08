@@ -82,55 +82,59 @@ class DACProgressDialog {
     await showDialog(
       context: context,
       barrierDismissible: isDismissible,
-      builder: (context) => WillPopScope(
-        onWillPop: () => Future.value(isDismissible),
-        child: Dialog(
-          elevation: dialogElevation,
-          backgroundColor: dialogColor,
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(dialogBorderRadius),
-          ),
-          child: PointerInterceptor(
-            child: ValueListenableBuilder<int>(
-              valueListenable: _progress,
-              builder: (BuildContext context, int value, Widget? child) {
-                if (value == maxProgressValue) close();
-
-                return Container(
-                  width:
-                      (_screenWidth >= 600.0) ? dialogMinWidth : _screenWidth,
-                  padding: contentPadding,
-                  child: (progressType == ProgressType.circular)
-                      ? CircularIndicator(
-                          value,
-                          maxProgressValue: maxProgressValue,
-                          showPercentIndicator: showPercentIndicator,
-                          strokeWidth: strokeWidth,
-                          valueColor: progressIndicatorColor,
-                          backgroundColor: progressIndicatorBackgroundColor,
-                          description: description,
-                          descriptionTextAlignment: descriptionTextAlignment,
-                          descriptionTextStyle: descriptionTextStyle,
-                          progressValueTextStyle: progressValueTextStyle,
-                        )
-                      : LinearIndicator(
-                          value,
-                          maxProgressValue: maxProgressValue,
-                          showPercentIndicator: showPercentIndicator,
-                          strokeWidth: strokeWidth,
-                          valueColor: progressIndicatorColor,
-                          backgroundColor: progressIndicatorBackgroundColor,
-                          description: description,
-                          descriptionTextAlignment: descriptionTextAlignment,
-                          descriptionTextStyle: descriptionTextStyle,
-                          progressValueTextStyle: progressValueTextStyle,
-                        ),
-                );
-              },
-            ),
-          ),
-        ),
+      builder: (context) => PopScope(
+      canPop: isDismissible, // controls if pop is allowed
+      onPopInvoked: (didPop) {
+        if (!didPop) {
+          // Custom behavior if pop was prevented
+        }
+      },
+  child: Dialog(
+    elevation: dialogElevation,
+    backgroundColor: dialogColor,
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(dialogBorderRadius),
+    ),
+    child: PointerInterceptor(
+      child: ValueListenableBuilder<int>(
+        valueListenable: _progress,
+        builder: (BuildContext context, int value, Widget? child) {
+          if (value == maxProgressValue) close();
+          return Container(
+            width: (_screenWidth >= 600.0) ? dialogMinWidth : _screenWidth,
+            padding: contentPadding,
+            child: (progressType == ProgressType.circular)
+                ? CircularIndicator(
+                    value,
+                    maxProgressValue: maxProgressValue,
+                    showPercentIndicator: showPercentIndicator,
+                    strokeWidth: strokeWidth,
+                    valueColor: progressIndicatorColor,
+                    backgroundColor: progressIndicatorBackgroundColor,
+                    description: description,
+                    descriptionTextAlignment: descriptionTextAlignment,
+                    descriptionTextStyle: descriptionTextStyle,
+                    progressValueTextStyle: progressValueTextStyle,
+                  )
+                : LinearIndicator(
+                    value,
+                    maxProgressValue: maxProgressValue,
+                    showPercentIndicator: showPercentIndicator,
+                    strokeWidth: strokeWidth,
+                    valueColor: progressIndicatorColor,
+                    backgroundColor: progressIndicatorBackgroundColor,
+                    description: description,
+                    descriptionTextAlignment: descriptionTextAlignment,
+                    descriptionTextStyle: descriptionTextStyle,
+                    progressValueTextStyle: progressValueTextStyle,
+                  ),
+          );
+        },
       ),
+    ),
+  ),
+),
+
     );
   }
 

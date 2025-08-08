@@ -1,3 +1,12 @@
+/*
+*******************************************************************
+* @Copyright         : 2025 DAC Data Table
+* @File Name         : dac_data_table.dart
+* @Description       : SM-DAC Data table boilerplate widget
+* @Author            : SM-DAC
+*******************************************************************
+*/
+
 import 'package:example/models/employee.dart';
 import 'package:dac_data_table/dac_data_table.dart';
 

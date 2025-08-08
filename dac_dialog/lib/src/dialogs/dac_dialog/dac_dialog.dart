@@ -1,3 +1,13 @@
+/*
+*******************************************************************
+* @Copyright         : 2025 DAC Dialog
+* @File Name         : dac_dialog.dart
+* @Description       : SM-DAC Dialog boilerplate widget
+* @Author            : SM-DAC
+*******************************************************************
+*/
+
+
 import 'package:flutter/material.dart';
 import 'package:dac_dialog/src/helpers/dialog_service.dart';
 import 'package:dac_dialog/src/shared_widgets/custom_button.dart';

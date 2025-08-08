@@ -1,3 +1,12 @@
+/*
+*******************************************************************
+* @Copyright         : 2025 DAC text field
+* @File Name         : dac_textfield.dart
+* @Description       : SM-DAC textfield boilerplate widget
+* @Author            : SM-DAC
+*******************************************************************
+*/
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
