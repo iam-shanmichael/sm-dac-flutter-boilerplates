@@ -39,7 +39,7 @@ class DACButton extends StatelessWidget {
   final String text;
 
   /// Icon left side of text inside the button.
-  final Icon? icon;
+  final Widget? icon;
 
   /// The fill color of the button if [isFilled] is set to `true`.
   final Color fillColor;
