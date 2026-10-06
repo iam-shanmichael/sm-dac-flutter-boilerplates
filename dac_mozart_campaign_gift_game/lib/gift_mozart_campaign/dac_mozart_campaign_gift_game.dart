@@ -15,8 +15,8 @@ export 'gift_game_theme.dart';
 
 enum GiftPhase { select, focus, opened }
 
-class GiftGame extends StatefulWidget {
-  const GiftGame({
+class DacMozartCampaignGiftGame extends StatefulWidget {
+  const DacMozartCampaignGiftGame({
     super.key,
     required this.tickets,
     this.theme = const GiftGameTheme(),
@@ -35,10 +35,12 @@ class GiftGame extends StatefulWidget {
   final bool showDemoReplay;
 
   @override
-  State<GiftGame> createState() => GiftGameState();
+  State<DacMozartCampaignGiftGame> createState() =>
+      DacMozartCampaignGiftGameState();
 }
 
-class GiftGameState extends State<GiftGame> with TickerProviderStateMixin {
+class DacMozartCampaignGiftGameState extends State<DacMozartCampaignGiftGame>
+    with TickerProviderStateMixin {
   GiftGameTheme get t => widget.theme;
 
   GiftPhase _phase = GiftPhase.select;
@@ -79,7 +81,7 @@ class GiftGameState extends State<GiftGame> with TickerProviderStateMixin {
   )..repeat(reverse: true);
 
   @override
-  void didUpdateWidget(covariant GiftGame oldWidget) {
+  void didUpdateWidget(covariant DacMozartCampaignGiftGame oldWidget) {
     super.didUpdateWidget(oldWidget);
     if (widget.tickets != oldWidget.tickets) {
       setState(() => _tickets = math.max(0, widget.tickets));
