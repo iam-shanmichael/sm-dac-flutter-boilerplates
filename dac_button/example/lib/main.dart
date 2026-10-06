@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
 class MyHomePage extends StatelessWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
@@ -37,12 +38,10 @@ class MyHomePage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               DACButton(
-                  text: 'Filled Button',
-                  minWidth: 350,
-                  width: 350,
-                  onPressed: (){
-
-                  },
+                text: 'Filled Button',
+                minWidth: 350,
+                width: 350,
+                onPressed: () {},
               ),
               const SizedBox(height: 15),
               DACButton(
@@ -50,9 +49,7 @@ class MyHomePage extends StatelessWidget {
                 isEnabled: false,
                 minWidth: 350,
                 width: 350,
-                onPressed: (){
-
-                },
+                onPressed: () {},
               ),
               const SizedBox(height: 15),
               DACButton(
@@ -61,9 +58,7 @@ class MyHomePage extends StatelessWidget {
                 isOutlined: true,
                 minWidth: 350,
                 width: 350,
-                onPressed: (){
-
-                },
+                onPressed: () {},
               ),
               const SizedBox(height: 15),
               DACButton(
@@ -71,9 +66,7 @@ class MyHomePage extends StatelessWidget {
                 icon: const Icon(Icons.accessibility_new_sharp),
                 minWidth: 350,
                 width: 350,
-                onPressed: (){
-
-                },
+                onPressed: () {},
               ),
             ],
           ),
@@ -82,5 +75,3 @@ class MyHomePage extends StatelessWidget {
     );
   }
 }
-
-
