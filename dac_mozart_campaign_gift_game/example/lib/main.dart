@@ -17,18 +17,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: DemoPage());
+        debugShowCheckedModeBanner: false, home: GiftGame());
   }
 }
 
-class DemoPage extends StatefulWidget {
-  const DemoPage({super.key});
+class GiftGame extends StatefulWidget {
+  const GiftGame({super.key});
 
   @override
-  State<DemoPage> createState() => _DemoPageState();
+  State<GiftGame> createState() => _GiftGameState();
 }
 
-class _DemoPageState extends State<DemoPage> {
+class _GiftGameState extends State<GiftGame> {
   final _game = GlobalKey<DacMozartCampaignGiftGameState>();
 
   int _tickets = 1;
