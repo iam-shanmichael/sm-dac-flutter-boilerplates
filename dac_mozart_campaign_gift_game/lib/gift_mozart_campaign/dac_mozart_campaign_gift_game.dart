@@ -169,7 +169,6 @@ class DacMozartCampaignGiftGameState extends State<DacMozartCampaignGiftGame>
   }
 
   void _celebrationDone() {
-    _rays.stop();
     widget.onCelebrationEnd?.call(_active);
   }
 
