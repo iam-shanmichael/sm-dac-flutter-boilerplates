@@ -396,7 +396,7 @@ class DACMozartCampaignGiftGameState extends State<DACMozartCampaignGiftGame>
                 Padding(
                   padding: EdgeInsets.fromLTRB(28, 0, 28, pad.bottom + 36),
                   child: _PillButton(
-                    label: t.buttonLabel,
+                    label: widget.buttonLabel ?? t.buttonLabel,
                     color: t.buttonColor,
                     textColor: t.buttonTextColor,
                     enabled: _tickets > 0,
