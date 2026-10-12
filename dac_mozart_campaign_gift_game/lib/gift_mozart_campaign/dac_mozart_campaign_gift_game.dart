@@ -23,7 +23,7 @@ class DACMozartCampaignGiftGame extends StatefulWidget {
     this.onOpened,
     this.onCelebrationEnd,
     this.onBack,
-    this.buttonLabel = 'Open this gift',
+    this.buttonLabel,
     this.buttonStatus,
     this.showDemoReplay = false,
   });
