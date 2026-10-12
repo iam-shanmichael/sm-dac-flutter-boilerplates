@@ -393,6 +393,16 @@ class DacMozartCampaignGiftGameState extends State<DacMozartCampaignGiftGame>
                     ),
                   ),
                 ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(28, 0, 28, pad.bottom + 36),
+                  child: _PillButton(
+                    label: t.buttonLabel,
+                    color: t.buttonColor,
+                    textColor: t.buttonTextColor,
+                    enabled: _tickets > 0,
+                    onTap: _choose,
+                  ),
+                ),
               ],
             ),
           ),
@@ -604,6 +614,81 @@ class DacMozartCampaignGiftGameState extends State<DacMozartCampaignGiftGame>
   }
 
   static double _lerp(double a, double b, double f) => a + (b - a) * f;
+}
+
+/// Big rounded button with a "press down" feel. Disabled = faded and not tappable.
+class _PillButton extends StatefulWidget {
+  const _PillButton({
+    required this.label,
+    required this.color,
+    required this.textColor,
+    required this.onTap,
+    this.enabled = true,
+  });
+
+  final String label;
+  final Color color;
+  final Color textColor;
+  final VoidCallback onTap;
+  final bool enabled;
+
+  @override
+  State<_PillButton> createState() => _PillButtonState();
+}
+
+class _PillButtonState extends State<_PillButton> {
+  bool _down = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Opacity(
+      opacity: widget.enabled ? 1 : .45,
+      child: GestureDetector(
+        onTapDown: widget.enabled ? (_) => setState(() => _down = true) : null,
+        onTapCancel: () => setState(() => _down = false),
+        onTapUp: widget.enabled
+            ? (_) {
+                setState(() => _down = false);
+                widget.onTap();
+              }
+            : null,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 100),
+          height: 56,
+          width: double.infinity,
+          transform: Matrix4.translationValues(0.0, _down ? 4.0 : 0.0, 0.0),
+          alignment: Alignment.center,
+          decoration: BoxDecoration(
+            color: widget.color,
+            borderRadius: BorderRadius.circular(28),
+            boxShadow: (_down
+                ? const [
+                    BoxShadow(color: Color(0x2E000000), offset: Offset(0, 2)),
+                    BoxShadow(
+                        color: Color(0x33000000),
+                        blurRadius: 12,
+                        offset: Offset(0, 6)),
+                  ]
+                : const [
+                    BoxShadow(color: Color(0x2E000000), offset: Offset(0, 6)),
+                    BoxShadow(
+                        color: Color(0x33000000),
+                        blurRadius: 24,
+                        offset: Offset(0, 12)),
+                  ]),
+          ),
+          child: Text(
+            widget.label,
+            style: TextStyle(
+                color: widget.textColor,
+                fontSize: 18,
+                fontWeight: FontWeight.w900,
+                letterSpacing: .2),
+          ),
+        ),
+      ),
+    );
+  }
 }
 
 typedef GiftGameArt = GiftArt;
