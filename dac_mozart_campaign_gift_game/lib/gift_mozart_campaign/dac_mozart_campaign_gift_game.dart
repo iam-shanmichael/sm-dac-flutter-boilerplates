@@ -169,6 +169,7 @@ class DacMozartCampaignGiftGameState extends State<DacMozartCampaignGiftGame>
   }
 
   void _celebrationDone() {
+    _rays.stop();
     widget.onCelebrationEnd?.call(_active);
   }
 
@@ -241,7 +242,6 @@ class DacMozartCampaignGiftGameState extends State<DacMozartCampaignGiftGame>
   }
 
   // build
-
   @override
   Widget build(BuildContext context) {
     final pad = MediaQuery.paddingOf(context);
@@ -607,5 +607,4 @@ class DacMozartCampaignGiftGameState extends State<DacMozartCampaignGiftGame>
   static double _lerp(double a, double b, double f) => a + (b - a) * f;
 }
 
-// keeps GiftArt exported for hosts that want to show the gift elsewhere (e.g. a Play-tab tile)
 typedef GiftGameArt = GiftArt;
