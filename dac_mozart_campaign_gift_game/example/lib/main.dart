@@ -29,7 +29,7 @@ class GiftGame extends StatefulWidget {
 }
 
 class _GiftGameState extends State<GiftGame> {
-  final _game = GlobalKey<DacMozartCampaignGiftGameState>();
+  final _game = GlobalKey<DACMozartCampaignGiftGameState>();
 
   int _tickets = 1;
 
@@ -38,7 +38,7 @@ class _GiftGameState extends State<GiftGame> {
     return Scaffold(
       backgroundColor: const Color(0xFF161210),
       body: Stack(children: [
-        DacMozartCampaignGiftGame(
+        DACMozartCampaignGiftGame(
           key: _game,
           tickets: _tickets,
           showDemoReplay: true,
