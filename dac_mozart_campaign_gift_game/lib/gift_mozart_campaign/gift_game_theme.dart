@@ -60,6 +60,8 @@ class GiftGameTheme {
   final Gradient ticketGradient;
   final Color ticketTextColor;
 
-  String asset(String file) => '$assetPath$file';
+  static const _packageName = 'dac_mozart_campaign_gift_game';
+
+  String asset(String fileName) => 'packages/$_packageName/$assetPath$fileName';
   double get giftAspect => giftCanvas.width / giftCanvas.height;
 }
