@@ -23,6 +23,8 @@ class DacMozartCampaignGiftGame extends StatefulWidget {
     this.onOpened,
     this.onCelebrationEnd,
     this.onBack,
+    this.buttonLabel = 'Open this gift',
+    this.buttonStatus,
     this.showDemoReplay = false,
   });
 
@@ -32,6 +34,8 @@ class DacMozartCampaignGiftGame extends StatefulWidget {
   final ValueChanged<int>? onCelebrationEnd;
 
   final VoidCallback? onBack;
+  final String? buttonLabel;
+  final String? buttonStatus;
   final bool showDemoReplay;
 
   @override
